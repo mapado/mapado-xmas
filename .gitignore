@@ -15,5 +15,5 @@ build
 npm-debug.log
 
 public/images/*
-!public/images/.gitkeep
+!public/images/fake.gif
 src/UsersMapado.js

@@ -1,0 +1,31 @@
+{
+    "keepGifsSecrets": true,
+
+    "users": [
+        {
+            "name": "Alice",
+            "avatar": "./demo/alice.jpg",
+            "gif": "./demo/alice.gif"
+        },
+        {
+            "name": "Bob",
+            "avatar": "./demo/bob.jpg",
+            "gif": "./demo/bob.gif"
+        },
+        {
+            "name": "Charlie",
+            "avatar": "./demo/charlie.jpg",
+            "gif": "./demo/charlie.gif"
+        },
+        {
+            "name": "Daniel",
+            "avatar": "./demo/daniel.jpg",
+            "gif": "./demo/daniel.gif"
+        },
+        {
+            "name": "Eve",
+            "avatar": "./demo/eve.jpg",
+            "gif": "./demo/eve.gif"
+        }
+    ]
+}

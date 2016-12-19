@@ -2,7 +2,7 @@ class User {
   constructor(name, image, gif) {
     this.name = name;
     this.image = image;
-    this.gif = `/images${gif}`;
+    this.gif = gif;
   }
 }
 

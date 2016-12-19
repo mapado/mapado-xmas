@@ -5,16 +5,16 @@ import './App.css';
 import baseUsers from './Users';
 import { GiveToUser } from './UserModel';
 import Storage from './Storage';
+import config from '../config.json';
 
 if (!window.location.hash) {
-  window.location.href = `/#${Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5)}`;
+  window.location.hash = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
 }
 
 const storage = new Storage(window.location.hash && window.location.hash.substr(1));
 
 
-const FAKE_GIF = 'http://i.giphy.com/l0CRAEsDFMOKmyvqE.gif';
-// const FAKE_GIF = null;
+const FAKE_GIF = config.keepGifsSecrets && './images/fake.gif';
 
 let shuffledGiveToUser = storage.getItem('users');
 if (!shuffledGiveToUser) {
@@ -97,7 +97,8 @@ class App extends Component {
     };
   }
 
-  openUser(user, event) {
+  openUser(giveToUser, event) {
+    const user = giveToUser.user;
     const x = event.clientX;
     const y = event.clientY;
 
@@ -110,7 +111,7 @@ class App extends Component {
       return {
         openingUser: user,
         openedUsers,
-        popupSrc: FAKE_GIF || user.giveTo.gif,
+        popupSrc: FAKE_GIF || giveToUser.giveTo.gif,
         popupX: x,
         popupY: y,
       };
@@ -138,7 +139,7 @@ class App extends Component {
               key={key}
               giveTo={giveToUser.giveTo}
               user={giveToUser.user}
-              onClick={(event) => this.openUser(giveToUser.user, event)}
+              onClick={(event) => this.openUser(giveToUser, event)}
               isOpen={this.state.openedUsers.find(u => u.name === giveToUser.user.name)}
             />
           )}
