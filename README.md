@@ -1,6 +1,11 @@
 Mapado Secret GIFt
 ===
 
+The secret GIFt take a list of users, randomize it, and displayed it the way each user will be assigned another user.
+No user can be assigned to self, and no "group split" are made too.
+
+![mapado scret GIFt](https://github.com/mapado/mapado-xmas/blob/master/public/demo/mapado-xmas.gif?raw=true)
+
 ## Configuration
 
 * Clone the projet
