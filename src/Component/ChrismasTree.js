@@ -59,9 +59,6 @@ class ChrismasTree extends PureComponent {
   render() {
     return (
       <div>
-        <style>
-        @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
-        </style>
         <h1>Mapado Secret GIFt</h1>
         <ul className="instructions">
           <li>Cliquez sur votre nom</li>
