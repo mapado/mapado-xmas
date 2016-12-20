@@ -12,8 +12,7 @@ html, body {
 }
 
 html {
-    background: #B1E7F1 url(../public/images/header2.jpg) no-repeat;
-    background-size: 100%;
+    background: #B1E7F1 url(../public/images/header3.jpg) no-repeat center top;
 }
 
 main {
