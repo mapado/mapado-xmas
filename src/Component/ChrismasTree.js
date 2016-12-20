@@ -59,12 +59,15 @@ class ChrismasTree extends PureComponent {
   render() {
     return (
       <div>
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+        </style>
         <h1>Mapado Secret GIFt</h1>
-        <ol className="instructions">
+        <ul className="instructions">
           <li>Cliquez sur votre nom</li>
           <li>Devinez qui est représenté</li>
           <li>Offrez-lui votre cadeau</li>
-        </ol>
+        </ul>
         <div className="user-list">
           {this.props.users.map((giveToUser, key) =>
             <ChrismasBall
