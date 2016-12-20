@@ -16,4 +16,5 @@ npm-debug.log
 
 public/images/*
 !public/images/fake.gif
+!public/images/header3.jpg
 src/UsersMapado.js
