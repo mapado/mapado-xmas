@@ -11,6 +11,10 @@ html, body {
     color: #424242;
 }
 
+html {
+    background: #fbf0ff;
+}
+
 main {
     text-align: center;
     padding: 1em;
