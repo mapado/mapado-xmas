@@ -1,5 +1,5 @@
 import React, { PureComponent, PropTypes } from 'react';
-import Popup from './Popup'
+import PopupGifList from './PopupGifList'
 import ChrismasBall from './ChrismasBall'
 
 class ChrismasTree extends PureComponent {
@@ -40,8 +40,9 @@ class ChrismasTree extends PureComponent {
         return {
           openingUser: user,
           openedUsers,
+          currentGifIndex: 0,
           popup: {
-            src: this.props.fakeGif || giveToUser.giveTo.gif,
+            gifList: this.props.fakeGif ? [this.props.fakeGif] : giveToUser.giveTo.gifList,
             startX: x,
             startY: y,
           }
@@ -79,9 +80,9 @@ class ChrismasTree extends PureComponent {
         </div>
 
         {this.state.popup &&
-          <Popup
-            src={this.state.popup.src}
-            onClick={this.handleClosePopup}
+          <PopupGifList
+            gifList={this.state.popup.gifList}
+            onClose={this.handleClosePopup}
             x={this.state.popup.startX}
             y={this.state.popup.startY}
           />

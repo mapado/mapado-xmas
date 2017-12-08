@@ -1,8 +1,11 @@
+import shuffle from 'lodash/shuffle';
+
 class User {
-  constructor(name, image, gif) {
+  constructor(name, image, gifList) {
     this.name = name;
     this.image = image;
-    this.gif = gif;
+    this.gifList = shuffle(gifList);
+    this.gif = this.gifList[0];
   }
 }
 
