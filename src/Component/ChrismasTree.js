@@ -1,7 +1,7 @@
 import React, { PureComponent, PropTypes } from 'react';
 import PopupGifList from './PopupGifList'
 import ChrismasBall from './ChrismasBall'
-import config from '../../config.json';
+import config from '../config';
 
 class ChrismasTree extends PureComponent {
   static propTypes = {

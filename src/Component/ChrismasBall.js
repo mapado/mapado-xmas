@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import config from '../../config.json';
+import config from '../config';
 
 const ChrismasBall = ({ user, giveTo, isOpen, onClick }) => {
   return (

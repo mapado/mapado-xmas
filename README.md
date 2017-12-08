@@ -12,6 +12,6 @@ No user can be assigned to self, and no "group split" are made too.
 
 * Clone the projet
 * `yarn` / `npm install`
-* Update de `config.json` file
+* Update the `src/config.js` file
 * Run `npm start`
 * Open http://localhost:3000/

@@ -4,7 +4,6 @@ import './App.css';
 import baseUsers from './Users';
 import { GiveToUser } from './UserModel';
 import Storage from './Storage';
-import config from '../config.json';
 import ChrismasTree from './Component/ChrismasTree'
 
 if (!window.location.hash) {
