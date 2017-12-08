@@ -1,5 +1,6 @@
 {
     "keepGifsSecrets": false,
+    "keepGifsSecretsSrc": "./images/fake.gif",
 
     "users": [
         {

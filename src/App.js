@@ -12,7 +12,6 @@ if (!window.location.hash) {
 }
 
 const storage = new Storage(window.location.hash && window.location.hash.substr(1));
-const FAKE_GIF = config.keepGifsSecrets ? './images/fake.gif' : null;
 
 let shuffledGiveToUser = storage.getItem('users');
 if (!shuffledGiveToUser) {
@@ -27,7 +26,6 @@ if (!shuffledGiveToUser) {
 class App extends PureComponent {
   render() {
     return <ChrismasTree
-      fakeGif={FAKE_GIF}
       users={shuffledGiveToUser}
       storage={storage}
     />

@@ -1,11 +1,11 @@
 import React, { PureComponent, PropTypes } from 'react';
 import PopupGifList from './PopupGifList'
 import ChrismasBall from './ChrismasBall'
+import config from '../../config.json';
 
 class ChrismasTree extends PureComponent {
   static propTypes = {
     storage: PropTypes.object.isRequired,
-    fakeGif: PropTypes.string,
     users: PropTypes.array.isRequired,
   }
 
@@ -42,7 +42,7 @@ class ChrismasTree extends PureComponent {
           openedUsers,
           currentGifIndex: 0,
           popup: {
-            gifList: this.props.fakeGif ? [this.props.fakeGif] : giveToUser.giveTo.gifList,
+            gifList: config.keepGifsSecrets ? [config.keepGifsSecretsSrc] : giveToUser.giveTo.gifList,
             startX: x,
             startY: y,
           }
@@ -70,7 +70,6 @@ class ChrismasTree extends PureComponent {
           {this.props.users.map((giveToUser, key) =>
             <ChrismasBall
               key={key}
-              fakeGif={this.props.fakeGif}
               giveTo={giveToUser.giveTo}
               user={giveToUser.user}
               onClick={this.handleOpenPopup(giveToUser)}
