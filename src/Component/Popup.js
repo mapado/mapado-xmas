@@ -7,7 +7,7 @@ class Popup extends PureComponent {
     onClick: PropTypes.func.isRequired,
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -18,10 +18,11 @@ class Popup extends PureComponent {
   }
 
   componentDidMount() {
-    setTimeout(() =>
-      this.setState({
-        className: 'big',
-      }),
+    setTimeout(
+      () =>
+        this.setState({
+          className: 'big',
+        }),
       0
     );
   }
@@ -30,12 +31,24 @@ class Popup extends PureComponent {
     const { src, onClick, x, y } = this.props;
 
     return (
-      <div className={cn('popup', this.state.className)} onClick={onClick} style={{ top: y, left: x }}>
-        <div style={{ backgroundImage: `url(${src})`}} />
-        <span className="popup-close">✖</span>
+      <div
+        className={cn('popup', this.state.className)}
+        onClick={onClick}
+        style={{ top: y, left: x }}
+      >
+        <div style={{ backgroundImage: `url(${src})` }} />
+        <span className="popup-close">{this.props.closeIcon}</span>
       </div>
     );
   }
 }
+
+Popup.defaultProps = {
+  closeIcon: '✖',
+};
+
+Popup.propTypes = {
+  closeIcon: PropTypes.string,
+};
 
 export default Popup;

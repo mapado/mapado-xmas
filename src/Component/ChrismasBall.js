@@ -5,22 +5,27 @@ import config from '../config';
 const ChrismasBall = ({ user, giveTo, isOpen, onClick }) => {
   return (
     <article className={cn('user', isOpen && 'active')} onClick={onClick}>
-      <div className="box">
-        <div className="img" style={{ backgroundImage:`url(${user.image})`, backgroundSize: 'cover' }} />
-
-        <h2>
-          {user.name}
-        </h2>
-      </div>
       <div className="present">
         <div className="bauble">
-          <div className="bauble-flex">
-            <img src={config.keepGifsSecrets ? config.keepGifsSecretsSrc : giveTo.gif} alt={giveTo.name} />
-            {true &&
-              <span className="name">{giveTo.name}</span>
+          <img
+            src={
+              config.keepGifsSecrets ? config.keepGifsSecretsSrc : giveTo.gif
             }
-          </div>
+            alt={giveTo.name}
+          />
+          <span className="name">{giveTo.name}</span>
         </div>
+      </div>
+      <div className="box">
+        <div
+          className="img"
+          style={{
+            backgroundImage: `url(${user.image})`,
+            backgroundSize: 'cover',
+          }}
+        />
+
+        <h2>{user.name}</h2>
       </div>
     </article>
   );
